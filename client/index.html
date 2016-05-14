@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="recastly">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Recast.ly - Recast Yourself</title>
+  <script src="lib/jquery/dist/jquery.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/lodash/dist/lodash.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.6.15/browser.js"></script>
-  <script src="lib/jquery/dist/jquery.js"></script>
-  <script src="lib/react/react.js"></script>
-  <script src="lib/react/react-dom.js"></script>
+  
 </head>
-<body>
+<body >
   <div id="app"></div>
-  <script type="text/babel" src="components/VideoListEntry.js"></script>
-  <script type="text/babel" src="components/VideoList.js"></script>
-  <script type="text/babel" src="components/VideoPlayer.js"></script>
-  <script type="text/babel" src="components/Nav.js"></script>
-  <script type="text/babel" src="components/Search.js"></script>
-  <script type="text/babel" src="components/App.js"></script>
+   <script src="lib/searchYouTube.js"></script>
+   <script src="data/exampleVideoData.js"></script>
+   <script src="app.js"></script>
+  <script src="directives/videoListEntry.js"></script>
+  <script src="directives/videoList.js"></script>
+  <script src="directives/videoPlayer.js"></script>
+  <script src="directives/search.js"></script>
+  <script src="directives/nav.js"></script>
+  <script src="directives/application.js"></script>
+  <application></application>
 </body>
 </html>

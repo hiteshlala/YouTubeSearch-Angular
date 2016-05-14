@@ -2,13 +2,15 @@
   "name": "recast.ly",
   "version": "1.0.0",
   "authors": [
-    "Hack Reactor <curriculum.team@hackreactor.com>"
+    "Hack Reactor <curriculum.team@hackreactor.com>",
+    "Hitesh Lala <hiteshlala@gmail.com>"
   ],
   "main": "",
   "dependencies": {
-    "react": "~0.14.6",
     "jquery": "~2.2.0",
-    "lodash": "~4.0.0"
+    "lodash": "~4.0.0",
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6"
   },
   "ignore": [
     "**/.*",
