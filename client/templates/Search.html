@@ -1,6 +1,4 @@
-<div className="search-bar form-inline">
-  <input className="form-control" type="text" value='{{query}}' onChange='someFunction'/>
-  <button className="btn hidden-sm-down">
-    <span className="glyphicon glyphicon-search"></span>
-  </button>
+<div class="search-bar form-inline">
+  <input class="form-control" type="text" ng-model='query' ng-keypress='getNewList($event)'/>
+  <button class="btn hidden-sm-down"><span class="glyphicon glyphicon-search"></span></button>
 </div> 

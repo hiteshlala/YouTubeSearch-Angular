@@ -1,9 +1,9 @@
-<div className="video-list-entry">
-  <div className="media-left media-middle">
-    <img className="media-object" src="{{video.snippet.thumbnails.default.url}}" />
+<div class="video-list-entry" >
+  <div class="media-left media-middle">
+    <img class="media-object" src="{{video.snippet.thumbnails.default.url}}" />
   </div>
-  <div className="media-body">
-    <div className="video-list-entry-title" onClick={chooseVideo}</div>
-    <div className="video-list-entry-detail">{{video.snippet.description}}</div>
+  <div class="media-body">
+    <div class="video-list-entry-title" ng-click="playThis($index)">{{video.snippet.title}}</div>
+    <div class="video-list-entry-detail">{{video.snippet.description}}</div>
   </div>
 </div>
