@@ -11,14 +11,14 @@ angular.module('recastly', [])
     },
     function(data) {
       $scope.videos = data.items;
-      $scope.currentVideo = 0;
-      $scope.getUrl = 'https://www.youtube.com/embed/'+ $scope.videos[$scope.currentVideo].id.videoId +'?autoplay=1';
+      $scope.playThis(0);
     }
   );
 
   $scope.playThis = function(index) {
     $scope.currentVideo = index;
-    $scope.getUrl = 'https://www.youtube.com/embed/'+ $scope.videos[$scope.currentVideo].id.videoId +'?autoplay=1';
+    $scope.getUrl = 'https://www.youtube.com/embed/'+
+      $scope.videos[$scope.currentVideo].id.videoId +'?autoplay=1';
   };
 
   $scope.queryYouTube = function(searchQuery) {
@@ -49,4 +49,4 @@ angular.module('recastly', [])
     // Allow loading from outer templates domain.
     'https://www.youtube.com/**'
   ]);
-});;
+});
