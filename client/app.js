@@ -1,14 +1,10 @@
 angular.module('recastly', [])
-.controller('recastly.data', function($scope) {
+
+.controller('recastly.data', function($scope, youTube) {
   
-  // this function is defined separately and initializes
-  //   the page with data and also loads a video in the player
-  searchYouTube(
-    {
-      query: 'the dizi',
-      max: 5,
-      key: YOUTUBE_API_KEY
-    },
+  // Initialize video list and video player with 'the dizi' query string
+  youTube.search(
+    'the dizi',
     function(data) {
       $scope.videos = data.items;
       $scope.playThis(0);
@@ -22,17 +18,14 @@ angular.module('recastly', [])
   };
 
   $scope.queryYouTube = function(searchQuery) {
-    searchYouTube(
-      {
-        query: searchQuery,
-        max: 5,
-        key: YOUTUBE_API_KEY
-      },
+    youTube.search(
+      searchQuery,
       function(data) {
         $scope.videos = data.items;
       }
     );
   };
+
   $scope.query = '';
 
   $scope.getNewList = function(key) {
@@ -42,6 +35,7 @@ angular.module('recastly', [])
     }
   };
 })
+
 .config(function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
     // Allow same origin resource loads.
