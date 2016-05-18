@@ -1,7 +1,18 @@
 # You Tube Search - Angular
 
-Uses Angular to implement a simplified YouTube player and search bar.
+> Implements a simplified YouTube player and search bar.
 
-This is a replica of [Recast.ly](https://github.com/hiteshlala/recast.ly) - a project I completed as a student at [hackreactor](http://hackreactor.com) using React Native.
+## Details
 
-Run with live-server.
+*  This is a replica of [Recast.ly](https://github.com/hiteshlala/recast.ly) (which uses React)
+*  Implemented using Angular.
+*  Has no back end, live-server is used to mimic a server.
+
+## Installing Dependencies And Running
+
+From witin the root directory:
+
+```sh
+bower install
+live-server
+``` 
